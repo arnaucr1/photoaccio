@@ -87,7 +87,7 @@ $conexion = conectar();
             <div class="jumbotron" style="border-radius:16px;">
 				<form  method="post" action="">
 				<h1 class="text-center titol"><img src="imagenes/blue-camera.png" width="50" height="50" class="d-inline-block align-top" alt=""> PhotoAcció</h1>
-				<h6 class="text-center">Versió 4.4</h6> 
+				<h6 class="text-center">Versió 4.5</h6> 
 					<div class="form-group">
 					<label for="exampleInputEmail1"><b>Correu electrònic</b></label>
 						<input  class="form-control btn-rodo"  type="email" id="username" name="username" placeholder="Escriu el teu correu electrònic" required>
