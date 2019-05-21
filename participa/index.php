@@ -107,11 +107,11 @@ session_start();
 										$file_ext = end($parse_file_name); 
 										error_reporting(E_ERROR | E_PARSE);
 										if(!exif_read_data($image_file)){
-
+											$nomfoto = $_FILES["archivo"]["name"][$i];
 											$participat = 1;
 											$socis_id = $id;
 											$concurs_id= $idconcurs;
-											$insertar = insertar_participacio($socis_id, $concurs_id, $participat);
+											$insertar = insertar_participacio($socis_id, $concurs_id, $participat, $nomfoto);
 											
 										echo "<br><br><div class='alert alert-success' role='alert'>".$_FILES["archivo"]["name"][$i]." | L'imatge no te dades exif.  <b> Pujada correctament </b> 🙂</div>";			
 										}else{
@@ -128,11 +128,11 @@ session_start();
 											echo "<br><br><div class='alert alert-danger' role='alert'>".$_FILES["archivo"]["name"][$i]." | <b><i class='fas fa-exclamation-triangle'></i> Error: l'imatge no es de 2019 </b> <i class='fas fa-exclamation-triangle'></i></div>";	
 											unlink($destino);
 										}else{
-									
+											$nomfoto = $_FILES["archivo"]["name"][$i];
 											$participat = 1;
 											$socis_id = $id;
 											$concurs_id= $idconcurs;
-											$insertar = insertar_participacio($socis_id, $concurs_id, $participat);
+											$insertar = insertar_participacio($socis_id, $concurs_id, $participat, $nomfoto);
 											
 										echo "<br><br><div class='alert alert-success' role='alert'>".$_FILES["archivo"]["name"][$i]." | <b>Pujada correctament </b> 🙂</div>";										
 										}

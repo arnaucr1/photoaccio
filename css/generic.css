@@ -45,7 +45,7 @@ body{
   flex-direction: row;
 }
 .googlesans{
-  font-family: Google Sans !important;
+  font-family: 'Roboto', sans-serif !important;
   color: #202124;
 }
 .box {

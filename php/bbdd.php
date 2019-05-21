@@ -16,9 +16,9 @@ function insertar_soci($nom, $cognoms, $email, $password_hash, $infantil, $telef
    desconectar($con);
    return $resultado;
 }
-function insertar_participacio($socis_id, $concurs_id, $participat){
+function insertar_participacio($socis_id, $concurs_id, $participat, $nomfoto){
     $con = conectar("root");
-    $registrar = "INSERT INTO participacions (socis_id, concurs_id, participat) VALUES ($socis_id, $concurs_id, $participat)";
+    $registrar = "INSERT INTO participacions (socis_id, concurs_id, participat, nomarxiu) VALUES ($socis_id, $concurs_id, $participat, $nomfoto)";
     $resultado = mysqli_query($con, $registrar);
     desconectar($con);
     return $resultado;
