@@ -74,17 +74,17 @@ session_start();
 											</nav>	<div class="tot">	
 												<?php
 												if($social_usu == 1){
-													$social_usu = "Grup A <i class='fas fa-star'></i>";
+													$social_usu = "Social Grup A <i class='fas fa-star'></i>";
 												}else if($social_usu == 2){
-													$social_usu = "Grup B <i class='fas fa-star'></i>";
+													$social_usu = "Social Grup B <i class='fas fa-star'></i>";
 												}
 												else{
 													$social_usu = "<i class='far fa-star'></i>";
 												}
 												if($infantil_usu == 1){
-													$infantil_usu = "Infantil";
+													$infantil_usu = "Categoria Infantil";
 												}else{
-													$infantil_usu = "Adulta";
+													$infantil_usu = "Categoria Adulta";
 												}
 												echo '
 											
@@ -179,7 +179,7 @@ session_start();
 																		}					
 																} ?>
 															</div><br>
-															<a class="btn btn-success btn-rodo" href="https://chat.whatsapp.com/HK02PobknYw7Pzz0sCAdgV" target="blank_" style="margin-right: 20px;" ><i class="fab fa-whatsapp"></i> Rebre avisos</a> 
+														
 															
 															<!-- Canvi Password -->
 															<button type="button" class="btn btn-secondary btn-rodo" style="margin-right: 20px;" data-toggle="modal" data-target="#password">
@@ -229,7 +229,7 @@ session_start();
 																<b>A continuació eliminaras totes les teves dades y fotografies del servidor, no podràs recuperar res ni tornar entrar.
 																</div>
 																<div class="modal-footer">
-																	<button type="button" class="btn btn-secondary btn-rodo" data-dismiss="modal">Tancar</button>
+																	<button type="button" class="btn btn-secondary btn-rodo" data-dismiss="modal">Cancelar</button>
 																	<a href="../eliminar/eliminar.php" class="btn btn-danger btn-rodo"><i class="fas fa-trash-alt"></i> CONTINUAR</a>
 																</div>
 																</div>

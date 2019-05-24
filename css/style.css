@@ -13,7 +13,15 @@ body,html {
     font-family: 'Roboto', sans-serif;
     
   }
-  
+  .sub-titol{
+    margin-top:-10px;
+    font-size: 15px;
+  }
+  .versio{
+    position:absolute;
+    right:35px;
+
+  }
   .btn-rodo{
     border-radius: 30rem;
   }

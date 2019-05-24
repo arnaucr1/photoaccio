@@ -58,7 +58,7 @@
 					</ul>
 					
 															<!-- Canvi Password -->
-															<button type="button" class="btn btn-secondary" style="margin-right: 20px;" data-toggle="modal" data-target="#password">
+															<button type="button" class="btn btn-secondary btn-rodo" style="margin-right: 20px;" data-toggle="modal" data-target="#password">
 															<i class="fas fa-key"></i> Contrasenya
 															</button>
 															<div class="modal fade" id="password" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -73,37 +73,37 @@
 																<div class="modal-body">
 																<form  method="post" action="">
 																<div class="form-group">
-																	<input class="form-control" type="password" id="newpass1" name="newpass1" placeholder="Contrasenya NOVA" autocomplete="new-password" required>						
+																	<input class="form-control btn-rodo" type="password" id="newpass1" name="newpass1" placeholder="Contrasenya NOVA" autocomplete="new-password" required>						
 																</div>
 																<div class="form-group">
-																	<input class="form-control" type="password" id="newpass2" name="newpass2" placeholder="Repeteix la Contrasenya NOVA" autocomplete="new-password" required>						
+																	<input class="form-control btn-rodo" type="password" id="newpass2" name="newpass2" placeholder="Repeteix la Contrasenya NOVA" autocomplete="new-password" required>						
 																</div>
 																</div>
 																<div class="modal-footer">
-																	<button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar</button>
-																	<button class="btn btn-primary">Guardar</button>
+																	<button type="button" class="btn btn-secondary btn-rodo" data-dismiss="modal">Tancar</button>
+																	<button class="btn btn-primary btn-rodo">Guardar</button>
 																</form>
 																</div>
 																</div>
 															</div>
 															</div>
-															<!-- Canvi Password -->		<a href="../cerrar_sesion.php" class="btn btn-info" ><i class="fas fa-sign-out-alt"></i> Tancar Sessió </a>	
+															<!-- Canvi Password -->		<a href="../cerrar_sesion.php" class="btn btn-info btn-rodo" ><i class="fas fa-sign-out-alt"></i> Tancar Sessió </a>	
 				</div>
 			</nav>
 			<div class="tot">			
 									<div class="container">
-									<br><br><?php echo '<h1 class="titol"> '.$dataactual.'</h1>'; 
+									<?php echo '<h1 class="titol"> '.$dataactual.'</h1>'; 
 								
 									?><br>
 									<!-- Afegir Concurs -->
-									<button type="button" class="btn btn-secondary" style="margin-right: 20px;" data-toggle="modal" data-target="#afegirconcurs">
-															<i class="fas fa-plus-circle"></i> Crear concurs
+									<button type="button" class="btn btn-success btn-rodo" style="margin-right: 20px;" data-toggle="modal" data-target="#afegirconcurs">
+															<i class="fas fa-plus-circle"></i> Nou concurs
 															</button>
 															<div class="modal fade" id="afegirconcurs" tabindex="-1" role="dialog" aria-labelledby="afegirconcurs" aria-hidden="true">
 															<div class="modal-dialog" role="document">
 																<div class="modal-content">
 																<div class="modal-header">
-																	<h5 class="modal-title" id="afegirconcurs"><i class="fas fa-plus-circle"></i> Crear concurs</h5>
+																	<h5 class="modal-title" id="afegirconcurs"><i class="fas fa-plus-circle"></i> Nou concurs</h5>
 																	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 																	<span aria-hidden="true">&times;</span>
 																	</button>
@@ -112,19 +112,19 @@
 																<form  method="post" action="">
 																<div class="form-group">
 																<label for="exampleInputEmail1"><b>Nom</b></label>
-																	<input class="form-control" type="text" id="nomconcurs" name="nomconcurs" placeholder="Nom del concurs" autocomplete="new-password" required>						
+																	<input class="form-control btn-rodo" type="text" id="nomconcurs" name="nomconcurs" placeholder="Nom del concurs" autocomplete="new-password" required>						
 																</div>
 																<div class="form-group">
 																<label for="exampleInputEmail1"><b>Tema</b></label>
-																	<input class="form-control" type="text" id="tema" name="tema" placeholder="Tema del concurs" autocomplete="new-password" required>						
+																	<input class="form-control btn-rodo" type="text" id="tema" name="tema" placeholder="Tema del concurs" autocomplete="new-password" required>						
 																</div>
 																<div class="form-group">
 																<label for="exampleInputEmail1"><b>Data tancament</b></label>
-																	<input class="form-control" type="date" id="obertura" name="tancament" placeholder="Tancament" autocomplete="new-password" required>						
+																	<input class="form-control btn-rodo" type="date" id="obertura" name="tancament" placeholder="Tancament" autocomplete="new-password" required>						
 																</div>
 																<div class="form-group">
 																<label for="exampleInputEmail1"><b>Enllaç (Url) Bases del concurs</b></label>
-																	<input class="form-control" type="text" id="bases" name="bases" placeholder="https://afr.cat/bases/" autocomplete="new-password" required>						
+																	<input class="form-control btn-rodo" type="text" id="bases" name="bases" placeholder="https://afr.cat/bases/" autocomplete="new-password" required>						
 																</div>
 																	<input type='hidden' value='0' name="fotosany">
 																	<input type="checkbox" id="check" value='1' name="fotosany" /> 
@@ -139,14 +139,18 @@
 																	</label>
 																</div>
 																<div class="modal-footer">
-																	<button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar</button>
-																	<button class="btn btn-primary">Crear</button>
+																	<button type="button" class="btn btn-secondary btn-rodo" data-dismiss="modal">Tancar</button>
+																	<button class="btn btn-primary btn-rodo">Crear</button>
 																</form>
 																</div>
 																</div>
 															</div>
 															</div>
-									<!-- Afegir Concurs -->	<br><br>
+									<!-- Afegir Concurs -->	
+										<!-- Afegir Concurs -->
+										<div class="btn btn-success btn-rodo" style="margin-right: 20px;" ><i class="fas fa-user-friends"></i> Administrar socis </div>
+													
+									<br><br>
 									<table class="table table-striped ">
 											<thead>
 												<tr>

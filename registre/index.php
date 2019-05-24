@@ -60,7 +60,7 @@
 					</div>
 						<input type="checkbox" id="check" name="condicions" required/> 
 							<label for="check2" > 
-							Confirmes <b>haber llegit</b> i <b>acceptar</b> les <a href="../condicions/" class="control2" target="_blank">condicions d'ús.</a>
+							Confirmes <b>haver llegit</b> i <b>acceptar</b> les <a href="../condicions/" class="control2" target="_blank">condicions d'ús.</a>
 						</label>
 					<br><br><a class="btn btn-info btn-rodo" href="../" style="color:white;" ><i class="fas fa-arrow-left"></i></a> <button class="btn btn-primary btn-rodo">Completar  </button>
 					<?php

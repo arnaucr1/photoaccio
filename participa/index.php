@@ -25,7 +25,7 @@
 			</nav>
 			<div class="tot">
 			<div class="container" style=" text-align:center; height:600px; ">
-					
+			
 <?php
 include "../php/bbdd.php";
 session_start();
@@ -113,7 +113,7 @@ session_start();
 											$concurs_id= $idconcurs;
 											$insertar = insertar_participacio($socis_id, $concurs_id, $participat, $nomfoto);
 											
-										echo "<br><br><div class='alert alert-success' role='alert'>".$_FILES["archivo"]["name"][$i]." | L'imatge no te dades exif.  <b> Pujada correctament </b> 🙂</div>";			
+										echo "<br><br><div class='alert alert-success btn-rodo' role='alert'>".$_FILES["archivo"]["name"][$i]." | L'imatge no te dades exif.  <b> Pujada correctament </b> 🙂</div>";			
 										}else{
 											
 											$exif_data = exif_read_data($image_file);
@@ -123,19 +123,19 @@ session_start();
 											foreach($photos as $data):
 											$datafoto = $data['DateTime'];
 										endforeach;
-										if($datafoto < "2019:00:00 00:00:00"){
+										/* if($datafoto < "2019:00:00 00:00:00"){ */
 
-											echo "<br><br><div class='alert alert-danger' role='alert'>".$_FILES["archivo"]["name"][$i]." | <b><i class='fas fa-exclamation-triangle'></i> Error: l'imatge no es de 2019 </b> <i class='fas fa-exclamation-triangle'></i></div>";	
+											echo "<br><br><div class='alert btn-rodo alert-danger' role='alert'>".$_FILES["archivo"]["name"][$i]." | <b><i class='fas fa-exclamation-triangle'></i> Error: l'imatge no es de 2019 </b> <i class='fas fa-exclamation-triangle'></i></div>";	
 											unlink($destino);
-										}else{
+										/* }else{ */
 											$nomfoto = $_FILES["archivo"]["name"][$i];
 											$participat = 1;
 											$socis_id = $id;
 											$concurs_id= $idconcurs;
 											$insertar = insertar_participacio($socis_id, $concurs_id, $participat, $nomfoto);
 											
-										echo "<br><br><div class='alert alert-success' role='alert'>".$_FILES["archivo"]["name"][$i]." | <b>Pujada correctament </b> 🙂</div>";										
-										}
+										echo "<br><br><div class='alert alert-success btn-rodo' role='alert'>".$_FILES["archivo"]["name"][$i]." | <b>Pujada correctament </b> 🙂</div>";										
+										/* } */
 									}
 										}else{
 											echo "<br>No se ha podido mover el archivo: ".$_FILES["archivo"]["name"][$i];
@@ -151,14 +151,14 @@ session_start();
 									}else{
 									
 										
-									echo "<div class='button-3'>".$_FILES["archivo"]["name"][$i]." |  <u>Error de format</u> o <u>Imatge masa gran.</u> &#128530 </div> ";
+									echo "<div class='button-3 btn-rodo'>".$_FILES["archivo"]["name"][$i]." |  <u>Error de format</u> o <u>Imatge masa gran.</u> &#128530 </div> ";
 									}
 								}
 							}
 						}else{
 							echo "<br><span class='badge  btn-rodo badge-warning'>🧐 Assegura't que les fotos siguin les correctes i compleixin les bases 🧐</span>";
 					
-							echo "<br><br><div class='text-b'> Fes click als recuadres per pujar les imatges.</div><br><br>";
+							echo "<br><br><div class='text-b'> Fes click als + per pujar les imatges.</div><br><br>";
 							
 							?>
 
@@ -210,8 +210,6 @@ session_start();
 					</body>
 					</div>	</div>					
 					</html> 
-					
-					
 					<?php
 						}
 						

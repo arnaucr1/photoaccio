@@ -128,6 +128,13 @@ function selectParticipat($soci_id2, $id_concurs) {
     desconectar($connect);
     return $result;
 }
+function selectParticipatPuntuat($soci_id2, $id_concurs) {
+    $connect = conectar();
+    $select = "SELECT * FROM concurs where estat=1 and tipus=0 or tipus=2 order by id DESC limit 4 ";
+    $result = mysqli_query($connect, $select);
+    desconectar($connect);
+    return $result;
+}
 function selectCiudad($postal_usu) {
     $connect = conectar();
     $select = "SELECT nombre FROM ciudad where id_ciudad=$postal_usu";

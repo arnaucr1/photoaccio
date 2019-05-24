@@ -87,7 +87,8 @@ $conexion = conectar();
             <div class="jumbotron" style="border-radius:16px;">
 				<form  method="post" action="">
 				<h1 class="text-center titol"><img src="imagenes/blue-camera.png" width="50" height="50" class="d-inline-block align-top" alt=""> PhotoAcció</h1>
-				<h6 class="text-center">Versió 4.5</h6> 
+				<h6 class="text-center sub-titol">Acció Fotogràfica Ripollet</h6> <br>
+
 					<div class="form-group">
 					<label for="exampleInputEmail1"><b>Correu electrònic</b></label>
 						<input  class="form-control btn-rodo"  type="email" id="username" name="username" placeholder="Escriu el teu correu electrònic" required>
@@ -100,8 +101,9 @@ $conexion = conectar();
 					<button class="btn btn-primary btn-rodo">Entrar </button><br><br>
 					<a class="btn btn-info btn-rodo" style="color:white;"  data-toggle="modal" data-target="#password" ><i class="fas fa-key"></i> </a>	<a class="btn btn-success btn-rodo" href="registre/"> Registre  <i class="fa fa-plus-circle" aria-hidden="true"></i></a>			
 				
-				
+					
 				</form>
+				
 				<?php
 						
 							if(!empty($_POST)){
@@ -119,11 +121,12 @@ $conexion = conectar();
 										$_SESSION["email"] = $email;
 										header('Location: home/');				
 									}else{
-										echo "<br><div class='alert alert-secondary' role='alert'><i class='fas fa-exclamation-triangle'></i> Dades incorrectes, per <a class='alert-link' >recuperar contrasenya al botó <i class='fas fa-key'></i></a></a></div>";
+										echo "<br><div class='alert alert-secondary' role='alert'><i class='fas fa-exclamation-triangle'></i>  <a class='alert-link' >Dades incorrectes, torna-ho a provar</a></a></div>";
 									}
 								}
 							}
 							?>
+							<h6 class="text-center versio">Versió 4.6</h6> 
 			</div>
 			<div class="alert alert-primary mic" role="alert">Aplicació desenvolupada per Arnau Canal Rial, <a class='alert-link' href="https://paypal.me/arnaucanal2"> convida'm a un cafè :) </a></div>
 	</div>
